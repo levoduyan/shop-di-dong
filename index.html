@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Store</title>
+    <link rel="shortcut icon" href="image/logo-icon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="image/logo.png" id="logo">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    SẢN PHẨM
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Iphone</a></li>
+                                    <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                    <li><a class="dropdown-item" href="#">Oppo</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">GIỚI THIỆU</a>
+                            </li>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit" id="btn1">Search</button>
+                            </form>
+                        </ul>
+                    </div>
+                    <!-- Modal -->
+                    <button id="cart">
+                        <i class='fa' aria-hidden="true">&#xf07a;</i>
+                        Giỏ Hàng
+                    </button>
+                    <div id="myModal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Giỏ Hàng</h5>
+                                <span class="close">X</span>
+                            </div>
+                            <div class="modal-body">
+                                <div class="cart-row">
+                                    <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                                    <span class="cart-price cart-header cart-column">Giá</span>
+                                    <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                                </div>
+                                <div class="cart-items">
+
+                                </div>
+                                <div class="cart-total">
+                                    <strong class="cart-total-title">Tổng Cộng:</strong>
+                                    <span class="cart-total-price">0VNĐ</span>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="slide">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image/banner1.jpg" class="d-block w-100" alt="banner 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner2.jpg" class="d-block w-100" alt="banner 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner3.jpg" class="d-block w-100" alt="banner 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="products">
+            <div class="row row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img" src="image/sp1.jpg" alt="Sản phẩm 1">
+                        <div class="card-body">
+                            <a href="#">
+                                <h5 class="card-title">iPhone 12 64GB</h5>
+                            </a>
+                            <div class="price">
+                                <span class="money">20490000đ</span>
+                            </div>
+                            <div class="card-text">
+                                <p>Màn hình 6.1", Chip Apple A14 Bionic</p>
+                                <p>RAM 4 GB, ROM 64 GB</p>
+                                <p>Camera sau: 2 camera 12 MP</p>
+                                <p>Camera trước: 12 MP</p>
+                                <p>Pin 2815 mAh, Sạc 20 W</p>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img" src="image/sp2.jpg" alt="Sản phẩm 2">
+                        <div class="card-body">
+                            <a href="#">
+                                <h5 class="card-title">Samsung Galaxy Z Fold2 5G</h5>
+                            </a>
+                            <div class="price">
+                                <span class="money">50000000đ</span>
+                            </div>
+                            <div class="card-text">
+                                <p>Màn hình Chính 7.59" &amp; Phụ 6.23", Chip Snapdragon 865+</p>
+                                <p>RAM 12 GB, ROM 256 GB</p>
+                                <p>Camera sau: 3 camera 12 MP</p>
+                                <p>Camera trước: Trong 10 MP &amp; Ngoài 10 MP</p>
+                                <p>Pin 4500 mAh, Sạc 25 W</p>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img" src="image/sp3.jpg" alt="Sản phẩm 3">
+                        <div class="card-body">
+                            <a href="#">
+                                <h5 class="card-title">Samsung Galaxy S21 Ultra 5G 256GB</h5>
+                            </a>
+                            <div class="price">
+                                <span class="money">28990000đ</span>
+                            </div>
+                            <div class="card-text">
+                                <p>Màn hình 6.8", Chip Exynos 2100</p>
+                                <p>RAM 12 GB, ROM 256 GB</p>
+                                <p>Camera sau: Chính 108 MP &amp; Phụ 12 MP, 10 MP, 10 MP</p>
+                                <p>Camera trước: 40 MP</p>
+                                <p>Pin 5000 mAh, Sạc 25 W</p>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img" src="image/sp4.jpg" alt="Sản phẩm 4">
+                        <div class="card-body">
+                            <a href="#">
+                                <h5 class="card-title">OPPO Find X3 Pro 5G</h5>
+                            </a>
+                            <div class="price">
+                                <span class="money">26990000đ</span>
+                            </div>
+                            <div class="card-text">
+                                <p>Màn hình 6.7", Chip Snapdragon 888</p>
+                                <p>RAM 12 GB, ROM 256 GB</p>
+                                <p>Camera sau: Chính 50 MP &amp; Phụ 50 MP, 13 MP, 3 MP</p>
+                                <p>Camera trước: 32 MP</p>
+                                <p>Pin 4500 mAh, Sạc 65 W</p>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img" src="image/sp5.jpg" alt="Sản phẩm 5">
+                        <div class="card-body">
+                            <a href="#">
+                                <h5 class="card-title">iPhone 11 128GB</h5>
+                            </a>
+                            <div class="price">
+                                <span class="money">16490000đ</span>
+                            </div>
+                            <div class="card-text">
+                                <p>Màn hình 6.1", Chip Apple A13 Bionic</p>
+                                <p>RAM 4 GB, ROM 128 GB</p>
+                                <p>Camera sau: 2 camera 12 MP</p>
+                                <p>Camera trước: 12 MP</p>
+                                <p>Pin 3110 mAh, Sạc 18 W</p>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img" src="image/sp6.jpg" alt="Sản phẩm 6">
+                        <div class="card-body">
+                            <a href="#">
+                                <h5 class="card-title">OPPO Reno5 Marvel</h5>
+                            </a>
+                            <div class="price">
+                                <span class="money">8230000đ</span>
+                            </div>
+                            <div class="card-text">
+                                <p>Màn hình 6.43", Chip Snapdragon 720G</p>
+                                <p>RAM 8 GB, ROM 128 GB</p>
+                                <p>Camera sau: Chính 64 MP &amp; Phụ 8 MP, 2 MP, 2 MP</p>
+                                <p>Camera trước: 44 MP</p>
+                                <p>Pin 4310 mAh, Sạc 50 W</p>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img" src="image/sp7.jpg" alt="Sản phẩm 7">
+                        <div class="card-body">
+                            <a href="#">
+                                <h5 class="card-title">Samsung Galaxy Note 20 Ultra</h5>
+                            </a>
+                            <div class="price">
+                                <span class="money">8230000đ</span>
+                            </div>
+                            <div class="card-text">
+                                <p>Màn hình 6.9", Chip Exynos 990</p>
+                                <p>RAM 8 GB, ROM 256 GB</p>
+                                <p>Camera sau: Chính 108 MP &amp; Phụ 12 MP, 12 MP, cảm biến Laser AF</p>
+                                <p>Camera trước: 10 MP</p>
+                                <p>Pin 4500 mAh, Sạc 25 W</p>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img" src="image/sp8.jpg" alt="Sản phẩm 8">
+                        <div class="card-body">
+                            <a href="#">
+                                <h5 class="card-title">iPhone 12 mini 256GB</h5>
+                            </a>
+                            <div class="price">
+                                <span class="money">8230000đ</span>
+                            </div>
+                            <div class="card-text">
+                                <p>Màn hình 5.4", Chip Apple A14 Bionic</p>
+                                <p>RAM 4 GB, ROM 128 GB</p>
+                                <p>Camera sau: 2 camera 12 MP</p>
+                                <p>Camera trước: 12 MP</p>
+                                <p>Pin 2227 mAh, Sạc 20 W</p>
+                            </div>
+                            <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer1" class="row">
+            <!--smap-->
+            <div id="footer" class="col-lg-3">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.493649985869!2d106.6297873498291!3d10.78268577715566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x798819bdcd0522b0!2zVHLGsOG7nW5nIENhbyDEkOG6s25nIEPDtG5nIE5naOG7hyBUaMO0bmcgVGluIFRwLkjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1618125811402!5m2!1svi!2s"
+                    width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div id="footer" class="col-lg-3">
+                <h5>THÔNG TIN SHOP</h5><br>
+                <p><i class="fa fa-fw fa-map-marker"></i> 12 Trịnh Đình Thảo, phường Hòa Thạnh, quận Tân Phú.</p>
+                <p><i class="fa fa-fw fa-phone"></i> 0123456789.</p>
+                <p><i class="fa fa-facebook-official"></i><a onclick="oPenfb()"> Store</a></p>
+                <p><b>Thời gian làm việc:</b> 8h00 - 22h00.</p>
+
+            </div>
+            <div id="footer" class="col-lg-3">
+                <h5>HỖ TRỢ KHÁCH HÀNG</h5><br>
+                <a href="#" id="hotro">Chính sách đổi trả</a><br>
+                <a href="#" id="hotro">Chăm sóc khách hàng</a><br>
+                <a href="#" id="hotro">Mua hàng trả góp</a>
+                <br>
+                <br>
+                <p><b>Họ và Tên:</b> Lê Võ Duy An</p>
+                <p><b>Lớp:</b> CD20CT3</p>
+                <b>MSSV:</b> 501200294
+            </div>
+            <div id="footer" class="col-lg-3">
+                <h5>LIÊN HỆ</h5><br>
+                <form action="" method="post" width="250px">
+                    <p><input type="text" placeholder="Họ Tên" name="Name"  required></p>
+                    <p><input type="email" placeholder="Email" name="Email" required></p>
+                    <p><textarea name="comment" placeholder="Nội Dung" cols="35" rows="3" required></textarea></p>
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/maincart.js"></script>
+</body>
+
+</html>
